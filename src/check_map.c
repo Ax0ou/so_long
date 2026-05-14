@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:28:03 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/14 14:40:24 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/14 17:28:08 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	get_map_size(t_game *game)
 	return (0);
 }
 
-int    check_char(t_game *game)
+int	check_char(t_game *game)
 {
     int    i;
     int    j;
@@ -50,3 +50,18 @@ int    check_char(t_game *game)
     return (0);
 }
 
+int	check_rect(t_game *game)
+{
+	int i;
+
+	if (!game || !game->map || !game->map[0])
+    	return (-1);
+	i = 0;
+	while (game->map[i])
+	{
+		if (ft_strlen(game->map[i]) - 1 != game->map_size_col)
+			return (-1);
+		i++;
+	}
+	return (0);
+}
