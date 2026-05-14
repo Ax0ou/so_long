@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:43:14 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/14 13:32:15 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/14 14:42:05 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ int	main(int argc, char **argv)
 	{
 	    write(1, "Error\nMap size error\n", 21);
 	    return (1);
+	}
+	if(check_char(&game) == -1)
+	{
+		write(1, "Error\nMap error\n", 16);
+		return(1);
 	}
 	return (0);
 }
