@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/13 16:58:32 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/14 13:31:57 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 int		check_arg(char *path);
 char	**read_map(int fd, char *path);
-int		get_map_size(t_game *game)
+int		get_map_size(t_game *game);
 
 typedef struct s_game
 {
