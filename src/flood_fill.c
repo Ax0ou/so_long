@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 14:09:52 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/15 17:15:46 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/15 17:17:58 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ int	check_path(t_game *game)
 	copy = dup_map(game->map, game->map_size_row);
 	flood(copy, game->player_y, game->player_x);
 	i = 0;
+	ret = 0;
 	while (copy[i])
 	{
 		j = 0;
