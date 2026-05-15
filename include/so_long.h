@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/15 12:37:09 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/15 17:18:39 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include "mlx.h"
 # include "libft.h"
 # include "get_next_line.h"
-
 
 typedef struct s_game
 {
@@ -44,6 +43,9 @@ char	**read_map(int fd, char *path);
 int		get_map_size(t_game *game);
 int		check_char(t_game *game);
 int		check_rect(t_game *game);
-int 	check_wall(t_game *game);
+int		check_wall(t_game *game);
 int		check_pec(t_game *game);
+int		check_path(t_game *game);
+int		find_player(t_game *game);
+void	free_map(char **map);
 #endif
