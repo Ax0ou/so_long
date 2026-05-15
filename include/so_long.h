@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/14 18:59:15 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/15 12:37:09 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,5 @@ int		get_map_size(t_game *game);
 int		check_char(t_game *game);
 int		check_rect(t_game *game);
 int 	check_wall(t_game *game);
+int		check_pec(t_game *game);
 #endif
