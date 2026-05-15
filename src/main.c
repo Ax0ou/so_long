@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:43:14 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/14 19:03:21 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/15 12:35:11 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	int	fd;
-	t_game game;
+	int		fd;
+	t_game	game;
 
 	if (argc != 2)
 	{
@@ -26,33 +26,33 @@ int	main(int argc, char **argv)
 	if (fd == -1)
 	{
 		write(1, "Error\nInvalid file\n", 19);
-    	return (1);
+		return (1);
 	}
 	game.map = read_map(fd, argv[1]);
 	if (!game.map)
 	{
-	    write(1, "Error\nMap error\n", 16);
-	    return (1);
+		write(1, "Error\nMap error\n", 16);
+		return (1);
 	}
 	if (get_map_size(&game) == -1)
 	{
-	    write(1, "Error\nMap size error\n", 21);
-	    return (1);
+		write(1, "Error\nMap size error\n", 21);
+		return (1);
 	}
-	if(check_char(&game) == -1)
+	if (check_char(&game) == -1)
 	{
 		write(1, "Error\nMap error\n", 16);
 		return (1);
 	}
-	if(check_rect(&game) == -1)
+	if (check_rect(&game) == -1)
 	{
 		write(1, "Error\nMap error\n", 16);
 		return (1);
 	}
 	if (check_wall(&game) == -1)
 	{
-	    write(1, "Error\nMap error\n", 16);
-	    return (1);
+		write(1, "Error\nMap error\n", 16);
+		return (1);
 	}
 	return (0);
 }
