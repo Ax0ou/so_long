@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:43:14 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/16 17:40:42 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/16 17:49:38 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	main(int argc, char **argv)
 		write(1, "Error\nMlx error\n", 16);
 		return (1);
 	}
+	mlx_loop(game.mlx);
 	free_map(game.map);
 	return (0);
 }
