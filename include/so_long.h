@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/15 17:18:39 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/16 17:02:07 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ int		check_pec(t_game *game);
 int		check_path(t_game *game);
 int		find_player(t_game *game);
 void	free_map(char **map);
+int		init_mlx(t_game *game);
 #endif
