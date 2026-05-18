@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 10:52:30 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/15 12:32:47 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/18 18:25:12 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ int	check_pec(t_game *game)
 	count_pec(game, &p, &e, &c);
 	if (p != 1 || e != 1 || c < 1)
 		return (-1);
+	game->collect = c;
 	return (0);
 }
