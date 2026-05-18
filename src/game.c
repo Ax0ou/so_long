@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:50:34 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/18 18:57:58 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/18 19:03:12 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,10 @@ int	move_player(t_game *game, int move_y, int move_x)
 	ft_printf("Mouvements: %d\n", game->moves);
 	render_map(game);
 	return (0);
+}
+void	close_game(t_game *game)
+{
+	free_map(game->map);
+	mlx_destroy_window(game->mlx, game->window);
+	exit(0);
 }
