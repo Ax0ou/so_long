@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 14:09:52 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/15 17:17:58 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/17 13:27:50 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,14 +97,3 @@ int	check_path(t_game *game)
 	free_map(copy);
 	return (ret);
 }
-/*
-check_path(t_game *game) — étape par étape :
-
-Vérifs de sécurité
-Trouver le joueur → find_player(game)
-Dupliquer la map → char **copy = dup_map(game->map, game->map_size_row);
-Lancer le flood → flood(copy, game->player_y, game->player_x);
-Parcourir copy : si on trouve un C ou un E → mémoriser que c'est invalide
-Libérer copy
-Retourner 0 ou -1
-*/

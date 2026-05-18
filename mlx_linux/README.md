@@ -22,14 +22,14 @@ Requirements for Linux
  - XShm extension must be present (package libxext-dev)
  - Utility functions from BSD systems - development files (package libbsd-dev)
  - **e.g. _sudo apt-get install gcc make xorg libxext-dev libbsd-dev_ (Debian/Ubuntu)**
- 
+
 Requirements for MacOS
  - [Xquartz](https://www.xquartz.org/)
 
 ```bash
-➜  ~ Brew install Xquartz
-➜  ~ reboot
-➜  ~ xeyes # run an hello world X11 app
+~ Brew install Xquartz
+~ reboot
+~ xeyes # run an hello world X11 app
 ```
 
 MlX Color Opacity / Transparency / Alpha (32 bits depth)

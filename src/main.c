@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:43:14 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/16 17:49:38 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/18 14:48:02 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ int	main(int argc, char **argv)
 	    return (1);
 	}
 	if (init_mlx(&game) == -1)
+	{
+		write(1, "Error\nMlx error\n", 16);
+		return (1);
+	}
+	if (load_textures(&game) == -1)
 	{
 		write(1, "Error\nMlx error\n", 16);
 		return (1);
