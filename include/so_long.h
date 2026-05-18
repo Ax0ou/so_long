@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/18 14:37:15 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/18 15:29:07 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ int		find_player(t_game *game);
 void	free_map(char **map);
 int		init_mlx(t_game *game);
 int		load_textures(t_game *game);
+int		render_map(t_game *game);
 #endif
