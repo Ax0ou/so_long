@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 17:00:07 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/18 15:46:36 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/19 10:48:52 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	init_mlx(t_game *game)
 	if (!game->mlx)
 		return (-1);
 	game->window = mlx_new_window(game->mlx,
-		game->map_size_col * 64,
-		game->map_size_row * 64,
-		"so_long");
+			game->map_size_col * 64,
+			game->map_size_row * 64,
+			"so_long");
 	if (!game->window)
 		return (-1);
 	return (0);
@@ -80,6 +80,7 @@ static void	put_tile(t_game *game, int i, int j)
 				game->img_exit, j * 64, i * 64);
 	}
 }
+
 int	render_map(t_game *game)
 {
 	int	i;

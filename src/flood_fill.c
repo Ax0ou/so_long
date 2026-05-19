@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 14:09:52 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/17 13:27:50 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/19 10:47:34 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ static char	**dup_map(char **map, int rows)
 
 int	check_path(t_game *game)
 {
-	char **copy;
-	int	i;
-	int	j;
-	int ret;
+	char	**copy;
+	int		i;
+	int		j;
+	int		ret;
 
 	if (!game || !game->map || !game->map[0])
 		return (-1);

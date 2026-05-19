@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:44:33 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/18 19:24:38 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/19 16:39:08 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,5 @@ int		render_map(t_game *game);
 int		move_player(t_game *game, int move_y, int move_x);
 int		close_game(t_game *game);
 int		key_handler(int keycode, t_game *game);
+void	error_exit(char *msg, t_game *game);
 #endif
