@@ -74,7 +74,7 @@ Available rules: `all`, `clean`, `fclean`, `re`.
 ### Run
 
 ```sh
-./so_long path/to/map.ber
+./so_long assets/maps/map.ber
 ```
 
 A few test maps are provided in `assets/maps/`.
