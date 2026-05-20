@@ -6,13 +6,14 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:04:39 by aalvard           #+#    #+#             */
-/*   Updated: 2026/04/09 20:40:06 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/20 13:27:46 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 static char	**fill_map(char *path, int count);
+static void	strip_newline(char *line);
 
 int	check_arg(char *path)
 {
@@ -45,6 +46,17 @@ char	**read_map(int fd, char *path)
 	return (fill_map(path, count));
 }
 
+static void	strip_newline(char *line)
+{
+	int	len;
+
+	if (!line)
+		return ;
+	len = ft_strlen(line);
+	if (len > 0 && line[len - 1] == '\n')
+		line[len - 1] = '\0';
+}
+
 static char	**fill_map(char *path, int count)
 {
 	char	**map;
@@ -61,6 +73,7 @@ static char	**fill_map(char *path, int count)
 	while (i < count)
 	{
 		map[i] = get_next_line(fd);
+		strip_newline(map[i]);
 		i++;
 	}
 	map[i] = NULL;
