@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:50:34 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/20 12:17:51 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/20 12:47:02 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ int	close_game(t_game *game)
 		mlx_destroy_image(game->mlx, game->img_exit);
 	if (game->window)
 		mlx_destroy_window(game->mlx, game->window);
+	mlx_destroy_display(game->mlx);
+	free(game->mlx);
 	free_map(game->map);
 	exit(0);
 }
