@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
+/*   By: aalvarad <aalvarad.studient.42lausanne.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 16:43:14 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/19 17:34:39 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/20 12:05:56 by aalvarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,10 @@ int	main(int argc, char **argv)
 	if (load_textures(&game) == -1)
 		error_exit("Textures error", &game);
 	mlx_hook(game.window, 17, 0, close_game, &game);
-	mlx_hook(game.window, 2, 0, key_handler, &game);
+	mlx_hook(game.window, 2, 1L<<0, key_handler, &game);
 	render_map(&game);
 	mlx_loop(game.mlx);
 	return (0);
 }
+
+
