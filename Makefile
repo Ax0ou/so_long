@@ -3,13 +3,23 @@ NAME = so_long
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+OBJ_DIR = obj
+
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = $(wildcard src/*.c)
-OBJS = $(SRCS:.c=.o)
+SRCS = src/main.c \
+	   src/parsing.c \
+	   src/check_map.c \
+	   src/check_content.c \
+	   src/flood_fill.c \
+	   src/init_mlx.c \
+	   src/game.c \
+	   src/error.c \
+	   src/utils.c
 
-# Détection OS
+OBJS = $(SRCS:src/%.c=$(OBJ_DIR)/%.o)
+
 OS = $(shell uname -s)
 
 ifeq ($(OS), Darwin)
@@ -35,13 +45,14 @@ $(MLX):
 $(NAME): $(OBJS) $(LIBFT) $(MLX)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(MLX_FLAGS) -o $(NAME)
 
-%.o: %.c
+$(OBJ_DIR)/%.o: src/%.c
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
 	$(MAKE) -C $(LIBFT_DIR) clean
 	$(MAKE) -C $(MLX_DIR) clean
-	rm -f $(OBJS)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	$(MAKE) -C $(LIBFT_DIR) fclean
