@@ -6,7 +6,7 @@
 /*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:50:34 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/18 19:23:53 by aalvard          ###   ########.fr       */
+/*   Updated: 2026/05/20 11:07:44 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 int	key_handler(int keycode, t_game *game)
 {
-	if (keycode == 53)
+	if (keycode == 53 || keycode == 65307)
 		close_game(game);
-	else if (keycode == 13 || keycode == 126)
+	else if (keycode == 13 || keycode == 126
+		|| keycode == 119 || keycode == 65362)
 		move_player(game, -1, 0);
-	else if (keycode == 1 || keycode == 125)
+	else if (keycode == 1 || keycode == 125
+		|| keycode == 115 || keycode == 65364)
 		move_player(game, 1, 0);
-	else if (keycode == 0 || keycode == 123)
+	else if (keycode == 0 || keycode == 123
+		|| keycode == 97 || keycode == 65361)
 		move_player(game, 0, -1);
-	else if (keycode == 2 || keycode == 124)
+	else if (keycode == 2 || keycode == 124
+		|| keycode == 100 || keycode == 65363)
 		move_player(game, 0, 1);
 	return (0);
 }
