@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalvarad <aalvarad.studient.42lausanne.    +#+  +:+       +#+        */
+/*   By: aalvard <aalvarad@student.42lausanne.ch    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:50:34 by aalvard           #+#    #+#             */
-/*   Updated: 2026/05/20 11:45:39 by aalvarad         ###   ########.fr       */
+/*   Updated: 2026/05/20 12:17:51 by aalvard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,18 @@ int	move_player(t_game *game, int move_y, int move_x)
 
 int	close_game(t_game *game)
 {
+	if (game->img_wall)
+		mlx_destroy_image(game->mlx, game->img_wall);
+	if (game->img_floor)
+		mlx_destroy_image(game->mlx, game->img_floor);
+	if (game->img_player)
+		mlx_destroy_image(game->mlx, game->img_player);
+	if (game->img_collect)
+		mlx_destroy_image(game->mlx, game->img_collect);
+	if (game->img_exit)
+		mlx_destroy_image(game->mlx, game->img_exit);
+	if (game->window)
+		mlx_destroy_window(game->mlx, game->window);
 	free_map(game->map);
-	mlx_destroy_window(game->mlx, game->window);
 	exit(0);
 }
